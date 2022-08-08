@@ -1,5 +1,6 @@
 import { useState } from "react";
-import EducationCard from "./Helper/educationSkill/educationCard";
+import EducationAllCards from "./Helper/experience/educationAllCard";
+import Skill from "./Helper/experience/skill";
 
 const Experience = () => {
   const [education, setEducation] = useState(true);
@@ -35,7 +36,7 @@ const Experience = () => {
           </button>
         </div>
         {/** Tab Conent will show based on education true or false **/}
-        {education === true ? <EducationCard /> : null}
+        {education === true ? <EducationAllCards /> : <Skill />}
       </div>
     </section>
   );

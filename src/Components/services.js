@@ -16,7 +16,7 @@ const Services = () => {
         {/*** cards  ***/}
         <div className="grid grid-cols-1 md:grid-cols-2 md:gap-8 gap-y-8">
           {servicsData.map((service) => {
-            return <Card {...service} />;
+            return <Card key={service.id} {...service} />;
           })}
         </div>
       </div>

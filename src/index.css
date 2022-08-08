@@ -17,3 +17,9 @@ html {
     background-repeat: no-repeat;
   }
 }
+
+@layer components {
+  .input {
+    @apply border-b pb-2 focus:border-b focus:outline-none focus:border-b-[#000] border-b-[#6e6e6e] w-full;
+  }
+}

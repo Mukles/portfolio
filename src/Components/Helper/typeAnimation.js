@@ -2,7 +2,7 @@ import Typewriter from "typewriter-effect";
 
 const TypeAnimation = () => {
   return (
-    <div className="text-[36px] leading-[47px] text-ornage font-semibold capitalize">
+    <div className="text-[30px] lg:text-[36px] leading-[39px] lg:leading-[47px] text-ornage font-semibold capitalize">
       <Typewriter
         options={{
           strings: [

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Card from "./Helper/portfolio/card";
 import { portfolioData } from "./Helper/portfolio/data";
 import Title from "./Helper/title";
@@ -13,11 +14,14 @@ const Portfolio = () => {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, egestas. Id fermentum nullam ipsum massa."
           }
         />
-        <div className="grid grid-cols-1 gap-y-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+        <motion.div
+          transition={{ duration: 0.5, staggerChildren: 5 }}
+          className="grid grid-cols-1 gap-y-8 md:gy-0 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-8"
+        >
           {portfolioData.map((item, idx) => (
             <Card key={idx} {...item} />
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

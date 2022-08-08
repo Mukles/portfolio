@@ -1,14 +1,80 @@
+import { motion } from "framer-motion";
+import { useState } from "react";
+
+const staggerChildren = {
+  show: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const cardMotion = {
+  hidden: {
+    opacity: 0,
+    x: -200,
+  },
+  show: {
+    opacity: 1,
+    x: 0,
+  },
+};
+
 const Card = ({ img, title, subTitle }) => {
+  const [isHover, setHover] = useState(false);
   return (
-    <div className="shadow relative overflow-hidden rounded-lg">
-      <img className="w-full object-cover" src={img} alt={""} />
-      <div className="overlay flex justify-end px-5 py-5 flex-col bg-[#000000cf] absolute top-0 left-0 w-full h-full ">
-        <h3 className="text-ornage font-semibold leading-[29px] text-[22px]">
+    <motion.div
+      variants={cardMotion}
+      initial={"hidden"}
+      whileInView={"show"}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: false, amount: 0.5 }}
+      className="shadow relative overflow-hidden rounded-lg cursor-pointer"
+    >
+      <motion.img
+        initial={{ scale: 1 }}
+        animate={{
+          scale: isHover ? 1.2 : 1,
+          transition: { duration: 0.5 },
+        }}
+        className="w-full object-cover"
+        src={img}
+        alt={""}
+      />
+      <motion.div
+        onHoverStart={() => setHover(true)}
+        onHoverEnd={() => setHover(false)}
+        initial={{ opacity: 0 }}
+        whileHover={{
+          opacity: 1,
+        }}
+        animate={{ staggerChildren }}
+        className="overlay flex justify-end px-5 py-5 flex-col bg-[#000000cf] absolute top-0 left-0 w-full h-full "
+      >
+        <motion.h3
+          initial={{ opacity: 0, y: 35 }}
+          animate={{
+            opacity: isHover === true ? 1 : 0,
+            y: isHover === true ? 0 : 35,
+            transition: { duration: 0.5 },
+          }}
+          className="text-ornage font-semibold leading-[29px] text-[22px]"
+        >
           {title}
-        </h3>
-        <h2 className="text-white text-base leading-[30px]">{subTitle}</h2>
-      </div>
-    </div>
+        </motion.h3>
+        <motion.h2
+          initial={{ opacity: 0, y: 35 }}
+          animate={{
+            opacity: isHover === true ? 1 : 0,
+            y: isHover === true ? 0 : 35,
+            transition: { duration: 0.5, delay: 0.5 },
+          }}
+          className="text-white text-base leading-[30px]"
+        >
+          {subTitle}
+        </motion.h2>
+      </motion.div>
+    </motion.div>
   );
 };
 
