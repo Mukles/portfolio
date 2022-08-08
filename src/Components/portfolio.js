@@ -4,8 +4,8 @@ import Title from "./Helper/title";
 
 const Portfolio = () => {
   return (
-    <section id="portfolio">
-      <div className="container mx-auto px-5">
+    <section id="portfolio" className="py-28">
+      <div className="container mx-auto px-5 lg:px-28">
         <Title
           title={"portfolio"}
           header={"my portfolio"}

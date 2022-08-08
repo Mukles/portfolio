@@ -9,9 +9,11 @@ const Title = ({ title, description, header }) => {
       <h1 className="text-blue font-bold text-3xl leading-[39px] capitalize">
         {header}
       </h1>
-      <p className="font-normal text-base leading-[30px] pb-10 text-semiBlack">
-        {description}
-      </p>
+      {description && (
+        <p className="font-normal text-base leading-[30px] pb-10 text-semiBlack">
+          {description}
+        </p>
+      )}
     </div>
   );
 };

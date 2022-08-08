@@ -1,6 +1,6 @@
+import Button from "./Helper/button";
 import Title from "./Helper/title";
 import { about } from "./utilities/about";
-
 const About = () => {
   return (
     <section id="about" className="py-8">
@@ -45,9 +45,7 @@ const About = () => {
                   <span className="text-black">{about[key]}</span>
                 </li>
               ))}
-              <button className="text-center border-2 border-ornage w-40 py-2 rounded-lg text-base leading-[30px] mt-4">
-                Download CV
-              </button>
+              <Button text={"Download CV"} />
             </ul>
           </div>
         </div>
