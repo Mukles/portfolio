@@ -6,7 +6,7 @@ const Experience = () => {
   const [education, setEducation] = useState(true);
   const toggleEducation = () => setEducation(!education);
   return (
-    <section id="experience" className="py-16 bg-grayWhite">
+    <section id="experience" className="pt-8 bg-grayWhite">
       <div className="container mx-auto px-5">
         {/**** experience title ****/}
         <h1 className="experice-title capitalize font-bold text-4xl">

@@ -1,8 +1,14 @@
-import React from "react";
+import { motion } from "framer-motion";
 
 const EducationSharedCard = ({ title, datas }) => {
   return (
-    <div className="card shadow-sm bg-white py-5 px-12">
+    <motion.div
+      initial={{ opacity: 0, x: -100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: false, amount: 0.6 }}
+      transition={{ duration: 0.8 }}
+      className="card shadow-sm bg-white py-5 px-12"
+    >
       <h4 className="w-24 px-3 py-2 rounded text capitalize text-[15px] leading-[20px] text-black bg-[#f7f7f7]">
         {title}
       </h4>
@@ -24,7 +30,7 @@ const EducationSharedCard = ({ title, datas }) => {
           </div>
         );
       })}
-    </div>
+    </motion.div>
   );
 };
 

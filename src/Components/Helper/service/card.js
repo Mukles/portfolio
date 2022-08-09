@@ -1,6 +1,26 @@
+import { motion } from "framer-motion";
+
+const cardMotion = {
+  offScreen: {
+    opacity: 0,
+    x: -200,
+  },
+  onScreen: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 1.2 },
+  },
+};
+
 const Card = ({ svg, title, link }) => {
   return (
-    <div className="md:bg-grayWhite rounded md:shadow-sm hover:shadw-[0 0 10px rgb(0 0 0 / 10%)] flex flex-col justify-start space-y-4 px-12 py-12">
+    <motion.div
+      initial={{ opacity: 0, x: -100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: false, amount: 0.6 }}
+      transition={{ duration: 0.8 }}
+      className="bg-grayWhite rounded md:shadow-sm hover:shadw-[0 0 10px rgb(0 0 0 / 10%)] flex flex-col justify-start space-y-4 px-12 py-12"
+    >
       <div className="card-img">
         <img className="h-12" src={svg} alt="" />
       </div>
@@ -13,7 +33,7 @@ const Card = ({ svg, title, link }) => {
           <i className="fa-solid fa-arrow-right-long hover:text-3xl"></i>
         </span>
       </button>
-    </div>
+    </motion.div>
   );
 };
 

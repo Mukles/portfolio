@@ -98,7 +98,7 @@ export const nav = [
   },
   {
     id: 6,
-    text: "contacts",
+    text: "contact",
     icon: (
       <svg
         stroke="currentColor"

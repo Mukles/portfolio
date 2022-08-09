@@ -32,10 +32,9 @@ const Card = ({ img, title, subTitle }) => {
 
   return (
     <motion.div
-      onViewportEnter={() => setInViewPort(true)}
-      onViewportLeave={() => setInViewPort(false)}
-      animate={animate}
-      viewport={{ once: false, amount: 0.8 }}
+      initial={cardMotion.offScreen}
+      whileInView={cardMotion.onScreen}
+      viewport={{ once: false, amount: 0.6 }}
       className="shadow relative overflow-hidden rounded-lg cursor-pointer"
     >
       <motion.img

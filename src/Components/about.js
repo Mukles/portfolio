@@ -39,7 +39,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
             src="/images/9.jpg"
             alt=""
-            className="rounded-lg h-[23rem] w-full md:h-[40rem]"
+            className="rounded-lg h-[23rem] sm:h-auto w-full md:h-[40rem]"
           />
           <motion.div
             initial={{ opacity: 0, x: -100 }}
