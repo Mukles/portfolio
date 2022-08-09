@@ -1,6 +1,5 @@
 import About from "./Components/about";
 import Contact from "./Components/contact";
-import Experience from "./Components/experience";
 import Footer from "./Components/fotter";
 import Home from "./Components/home";
 import LargeDeviceNav from "./Components/nav/laptop";
@@ -16,7 +15,6 @@ function App() {
       <LargeDeviceNav />
       <Home />
       <About />
-      <Experience />
       <Services />
       <Portfolio />
       <News />

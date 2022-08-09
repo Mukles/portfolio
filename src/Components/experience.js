@@ -9,7 +9,7 @@ const Experience = () => {
     <div className="pt-8 bg-grayWhite">
       <div className="container mx-auto px-5">
         {/**** experience title ****/}
-        <h1 className="experice-title capitalize font-bold text-4xl">
+        <h1 className="experice-title capitalize font-bold text-4xl pb-3">
           My experience
         </h1>
         {/*** tab button ***/}

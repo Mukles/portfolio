@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Experience from "./experience";
 import Button from "./Helper/button";
 import Title from "./Helper/title";
 import { about } from "./utilities/about";
@@ -23,7 +24,7 @@ const About = () => {
       className="py-16"
       transition={{ staggerChildren: 0.5 }}
     >
-      <motion.div className="container mx-auto px-5">
+      <motion.div className="container mx-auto px-5 pb-16">
         <Title
           title={"about me"}
           header={"about me"}
@@ -79,6 +80,7 @@ const About = () => {
           </motion.div>
         </div>
       </motion.div>
+      <Experience />
     </motion.section>
   );
 };

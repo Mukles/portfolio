@@ -27,6 +27,19 @@ html {
     color: #f52225;
   }
 
+  .submit {
+    color: #fff;
+    background: #f52225;
+    border-color: #f52225 !important;
+  }
+  .submit span:first-child {
+    color: #fff;
+  }
+
+  .submit:hover span:last-child {
+    color: #fff;
+  }
+
   .fixed-nav {
     background: #fff !important;
     z-index: 1000 !important;

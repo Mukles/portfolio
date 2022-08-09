@@ -27,6 +27,7 @@ const LargeDeviceNav = () => {
               return (
                 <li key={id} className="cursor-pointer">
                   <Link
+                    offset={-95}
                     spy={true}
                     smooth={true}
                     activeClass={"navActive"}
