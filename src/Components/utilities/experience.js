@@ -1,31 +1,37 @@
-export const expericeData = {
-  experice: [
-    {
-      name: "Sr. Software Tester",
-      shifty: "Full Time | Remote",
-      present: "2020 - Present",
-      button: "Google Inc.",
-      discription:
-        "I design and develop services for customers of all sizes, specializing in creating stylish, modern websites",
-    },
-    {
-      name: "Sr. Software Tester",
-      shifty: "Full Time | Remote",
-      present: "2020 - Present",
-      button: "ib-themes ltd.",
-      discription:
-        "I design and develop services for customers of all sizes, specializing in creating stylish, modern websites",
-    },
-    {
-      name: "Sr. Software Tester",
-      shifty: "Full Time | Remote",
-      present: "2020 - Present",
-      button: "Avada Theme.",
-      discription:
-        "I design and develop services for customers of all sizes, specializing in creating stylish, modern websites",
-    },
-  ],
-};
+export const expericeData = [
+  {
+    name: "Sr. Software Tester",
+    shifty: "Full Time | Remote",
+    present: "2020 - Present",
+    button: "Google Inc.",
+    discription:
+      "I design and develop services for customers of all sizes, specializing in creating stylish, modern websites",
+  },
+  {
+    name: "Sr. Software Tester",
+    shifty: "Full Time | Remote",
+    present: "2020 - Present",
+    button: "ib-themes ltd.",
+    discription:
+      "I design and develop services for customers of all sizes, specializing in creating stylish, modern websites",
+  },
+  {
+    name: "Sr. Software Tester",
+    shifty: "Full Time | Remote",
+    present: "2020 - Present",
+    button: "Avada Theme.",
+    discription:
+      "I design and develop services for customers of all sizes, specializing in creating stylish, modern websites",
+  },
+  {
+    name: "Sr. Software Tester",
+    shifty: "Full Time | Remote",
+    present: "2020 - Present",
+    button: "Avada Theme.",
+    discription:
+      "I design and develop services for customers of all sizes, specializing in creating stylish, modern websites",
+  },
+];
 
 export const education = [
   {

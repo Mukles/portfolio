@@ -10,25 +10,32 @@ const staggerChildren = {
 };
 
 const cardMotion = {
-  hidden: {
+  offScreen: {
     opacity: 0,
-    x: -200,
+    x: -55,
   },
-  show: {
+  onScreen: {
     opacity: 1,
     x: 0,
+    type: "spring",
+    stifness: 150,
+    damping: 50,
+    transition: { duration: 0.8 },
   },
 };
 
 const Card = ({ img, title, subTitle }) => {
   const [isHover, setHover] = useState(false);
+  const [isInViewPort, setInViewPort] = useState(false);
+  const animate =
+    isInViewPort === true ? cardMotion.onScreen : cardMotion.offScreen;
+
   return (
     <motion.div
-      variants={cardMotion}
-      initial={"hidden"}
-      whileInView={"show"}
-      transition={{ duration: 0.6 }}
-      viewport={{ once: false, amount: 0.5 }}
+      onViewportEnter={() => setInViewPort(true)}
+      onViewportLeave={() => setInViewPort(false)}
+      animate={animate}
+      viewport={{ once: false, amount: 0.8 }}
       className="shadow relative overflow-hidden rounded-lg cursor-pointer"
     >
       <motion.img
@@ -48,7 +55,6 @@ const Card = ({ img, title, subTitle }) => {
         whileHover={{
           opacity: 1,
         }}
-        animate={{ staggerChildren }}
         className="overlay flex justify-end px-5 py-5 flex-col bg-[#000000cf] absolute top-0 left-0 w-full h-full "
       >
         <motion.h3

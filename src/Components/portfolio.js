@@ -2,6 +2,14 @@ import { motion } from "framer-motion";
 import Card from "./Helper/portfolio/card";
 import { portfolioData } from "./Helper/portfolio/data";
 import Title from "./Helper/title";
+const variants = {
+  offScreen: {},
+  onScreen: {
+    transition: {
+      staggerChildren: 0.5,
+    },
+  },
+};
 
 const Portfolio = () => {
   return (
@@ -15,7 +23,9 @@ const Portfolio = () => {
           }
         />
         <motion.div
-          transition={{ duration: 0.5, staggerChildren: 5 }}
+          variants={variants}
+          initial="offScreen"
+          animate="onScreen"
           className="grid grid-cols-1 gap-y-8 md:gy-0 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-8"
         >
           {portfolioData.map((item, idx) => (
