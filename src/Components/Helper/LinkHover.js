@@ -13,7 +13,7 @@ const LinkHover = ({ text }) => {
       <motion.span
         animate={{ y: isHover ? -20 : 11, transition: { duration: 0.3 } }}
         initial={{ opacity: 1, y: 11 }}
-        className="md:text-white lg:text-semiBlack"
+        className="md:text-white lg:text-semiBlack text"
       >
         {text}
       </motion.span>

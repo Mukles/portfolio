@@ -22,4 +22,71 @@ html {
   .input {
     @apply border-b pb-2 focus:border-b focus:outline-none focus:border-b-[#000] border-b-[#6e6e6e] w-full;
   }
+
+  .active .text {
+    color: #f52225;
+  }
+
+  .fixed-nav {
+    background: #fff !important;
+    z-index: 1000 !important;
+    box-shadow: 2px 0px 7px #0000003b;
+  }
+
+  .fixed-nav div ul li a div span:first-child {
+    color: #6e6e6e !important;
+  }
+
+  .fixed-nav div ul button {
+    border: 2px solid #6e6e6e !important;
+    color: #6e6e6e !important;
+  }
+
+  .fixed-nav div ul button:hover {
+    border: 2px solid #f52225 !important;
+  }
+
+  .hover-md span:first-child {
+    transform: translateY(1px);
+    transition: 0.5s;
+  }
+  .navActive div span:first-child,
+  .hover-md:hover span:first-child {
+    transition: 0.5;
+    transform: translateY(-29px);
+  }
+
+  .hover-md span:last-child {
+    transition: 0.5s;
+    transform: translateY(5px);
+  }
+
+  .navActive div span:last-child,
+  .hover-md:hover span:last-child {
+    color: red;
+    transform: translateY(-29px);
+  }
+
+  .hover-btn span:first-child {
+    transform: translateY(0);
+    transition: 0.4s;
+  }
+
+  .hover-btn:hover span:first-child {
+    transform: translateY(-35px);
+  }
+
+  .hover-btn:hover {
+    border-color: #f52225;
+  }
+
+  .hover-btn span:last-child {
+    color: #f52225;
+    transform: translateY(10px);
+    transition: 0.4s;
+  }
+
+  .hover-btn:hover span:last-child {
+    transform: translateY(-30px);
+  }
 }

@@ -6,7 +6,7 @@ const Experience = () => {
   const [education, setEducation] = useState(true);
   const toggleEducation = () => setEducation(!education);
   return (
-    <section id="experience" className="pt-8 bg-grayWhite">
+    <div className="pt-8 bg-grayWhite">
       <div className="container mx-auto px-5">
         {/**** experience title ****/}
         <h1 className="experice-title capitalize font-bold text-4xl">
@@ -38,7 +38,7 @@ const Experience = () => {
         {/** Tab Conent will show based on education true or false **/}
         {education === true ? <EducationAllCards /> : <AllSkillCard />}
       </div>
-    </section>
+    </div>
   );
 };
 

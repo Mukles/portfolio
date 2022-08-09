@@ -62,10 +62,7 @@ const Contact = () => {
               <span className="err-message"></span>
             </div>
           </form>
-          <Button
-            text={"Submit"}
-            css={{ background: "#f52225", color: "#fff", margin: "2rem" }}
-          />
+          <Button text={"submit"} />
         </div>
       </div>
     </section>
