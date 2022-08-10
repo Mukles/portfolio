@@ -8,16 +8,6 @@ html {
   font-family: "Poppins", sans-serif;
 }
 
-@layer utilities {
-  .bg-image {
-    background: linear-gradient(rgb(255, 255, 255, 0), rgb(255, 255, 255, 0)),
-      url(https://willowy-gaufre-75063a.netlify.app/images/10.jpg);
-    background-size: cover;
-    background-position: 75% 0%;
-    background-repeat: no-repeat;
-  }
-}
-
 @layer components {
   .input {
     @apply border-b pb-2 focus:border-b focus:outline-none focus:border-b-[#000] border-b-[#6e6e6e] w-full;

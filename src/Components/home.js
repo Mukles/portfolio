@@ -27,7 +27,17 @@ const Home = () => {
   };
 
   return (
-    <section id="home" className="h-screen bg-image relative">
+    <section
+      style={{
+        backgroundSize: "cover",
+        backgroundPosition: "75% 0",
+        backgroundRepeat: "no-repeat",
+        background:
+          "linear-gradient(rgb(255, 255, 255, 0), rgb(255, 255, 255, 0)), url(/images/10.jpg)",
+      }}
+      id="home"
+      className="h-screen bg-image relative"
+    >
       {/*** overlay ****/}
       <div
         className="absolute top-0 left-0 w-full h-full block lg:hidden"
