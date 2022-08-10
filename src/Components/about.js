@@ -3,19 +3,6 @@ import Experience from "./experience";
 import Button from "./Helper/button";
 import Title from "./Helper/title";
 import { about } from "./utilities/about";
-const parentVarient = {
-  hidden: {
-    opacity: 0,
-    x: -60,
-  },
-  show: {
-    opacity: 1,
-    x: 0,
-  },
-  transition: {
-    transition: { duration: 1.2, staggerChildren: 0.3 },
-  },
-};
 
 const About = () => {
   return (

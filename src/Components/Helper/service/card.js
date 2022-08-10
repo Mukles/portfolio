@@ -1,17 +1,5 @@
 import { motion } from "framer-motion";
 
-const cardMotion = {
-  offScreen: {
-    opacity: 0,
-    x: -200,
-  },
-  onScreen: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 1.2 },
-  },
-};
-
 const Card = ({ svg, title, link }) => {
   return (
     <motion.div

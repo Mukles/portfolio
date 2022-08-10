@@ -1,14 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-const staggerChildren = {
-  show: {
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
-
 const cardMotion = {
   offScreen: {
     opacity: 0,
@@ -26,9 +18,6 @@ const cardMotion = {
 
 const Card = ({ img, title, subTitle }) => {
   const [isHover, setHover] = useState(false);
-  const [isInViewPort, setInViewPort] = useState(false);
-  const animate =
-    isInViewPort === true ? cardMotion.onScreen : cardMotion.offScreen;
 
   return (
     <motion.div

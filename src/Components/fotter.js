@@ -4,7 +4,7 @@ const Footer = () => {
       <div className="container mx-auto px-5 py-5">
         <p className="leading-[30px] text-white text-center">
           © 2022 by{" "}
-          <a href="#" className="hover:text-ornage">
+          <a href="/home" className="hover:text-ornage">
             ib-themes
           </a>
           . All rights reserved.
