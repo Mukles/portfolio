@@ -29,11 +29,11 @@ const Home = () => {
   return (
     <section
       style={{
-        backgroundSize: "cover",
-        backgroundPosition: "75% 0",
-        backgroundRepeat: "no-repeat",
         background:
           "linear-gradient(rgb(255, 255, 255, 0), rgb(255, 255, 255, 0)), url(/images/10.jpg)",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "75% 0",
+        backgroundSize: "cover",
       }}
       id="home"
       className="h-screen bg-image relative"
