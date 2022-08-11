@@ -4,7 +4,8 @@ import { useState } from "react";
 const cardMotion = {
   offScreen: {
     opacity: 0,
-    x: -55,
+    x: -65,
+    transition: { duration: 0.4 },
   },
   onScreen: {
     opacity: 1,
@@ -12,18 +13,21 @@ const cardMotion = {
     type: "spring",
     stifness: 150,
     damping: 50,
-    transition: { duration: 0.8 },
+    transition: { duration: 0.9 },
   },
 };
 
 const Card = ({ img, title, subTitle }) => {
   const [isHover, setHover] = useState(false);
+  const [view, setView] = useState(false);
 
   return (
     <motion.div
       initial={cardMotion.offScreen}
-      whileInView={cardMotion.onScreen}
-      viewport={{ once: false, amount: 0.6 }}
+      onViewportEnter={() => setView(true)}
+      onViewportLeave={() => setView(false)}
+      animate={view ? cardMotion.onScreen : cardMotion.offScreen}
+      viewport={{ once: false, amount: 0.4 }}
       className="shadow relative overflow-hidden rounded-lg cursor-pointer"
     >
       <motion.img

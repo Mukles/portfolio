@@ -6,7 +6,7 @@ const variants = {
   offScreen: {},
   onScreen: {
     transition: {
-      staggerChildren: 0.5,
+      staggerChildren: 2,
     },
   },
 };

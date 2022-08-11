@@ -92,4 +92,15 @@ html {
   .hover-btn:hover span:last-child {
     transform: translateY(-30px);
   }
+
+  .mobileNab__active {
+    stroke: red;
+  }
+
+  .mobileNav__active svg,
+  .mobileNav__active span {
+    stroke: #f52225;
+    color: #f52225;
+    text-align: center;
+  }
 }
