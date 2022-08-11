@@ -9,18 +9,18 @@ const Experience = () => {
     <div className="pt-8 bg-grayWhite">
       <div className="container mx-auto px-5">
         {/**** experience title ****/}
-        <h1 className="experice-title capitalize font-bold text-4xl pb-3">
+        <h1 className="experice-title capitalize font-bold text-4xl pb-6">
           My experience
         </h1>
         {/*** tab button ***/}
-        <div className="flex space-x-4 items-center mt-5">
+        <div className="flex space-x-4 items-center mt-5 text-[13px] font-medium">
           <button
             onClick={() => toggleEducation()}
             className={`${
               education === true
                 ? "bg-ornage text-white border-2 border-ornage"
                 : "border-2 border-semiBlack"
-            } text-[13px] leading-[30px] text-semiblack px-3 py-1 rounded`}
+            } text-[13px] leading-[30px] text-semiBlack px-4 sm:px-7 sm:font-semibold sm:text-base py-2 rounded`}
           >
             Education & Skills
           </button>
@@ -30,7 +30,7 @@ const Experience = () => {
               education === false
                 ? "bg-ornage text-white border-2 border-ornage"
                 : "border-2 border-semiBlack"
-            } text-semiBlack text-[13px] leading-[30px] px-4 py-1 rounded-lg`}
+            } text-semiBlack text-[13px] leading-[30px] sm:text-base sm:font-medium px-5 sm:px-8 py-2 rounded-lg`}
           >
             Experience
           </button>

@@ -1,6 +1,17 @@
+import { motion } from "framer-motion";
 import Card from "./Helper/news/Card";
 import Title from "./Helper/title";
 import { newsData } from "./utilities/newData";
+
+const NewsMotion = {
+  show: {
+    opacity: 1,
+    transition: { duration: 1.2, staggerChildren: 0.8 },
+  },
+  hidden: {
+    opacity: 0,
+  },
+};
 
 const News = () => {
   return (
@@ -14,11 +25,14 @@ const News = () => {
           }
         />
         {/*** new card ***/}
-        <div className="grid grid-cols-1 gap-y-8 md:gy-0 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-8">
+        <motion.div
+          variants={NewsMotion}
+          className="grid grid-cols-1 gap-y-8 md:gy-0 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-8"
+        >
           {newsData.map((news, idx) => (
             <Card key={idx} {...news} />
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

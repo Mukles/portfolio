@@ -17,7 +17,7 @@ const EducationAllCards = () => {
   return (
     <motion.div
       variants={EducationMotion}
-      className="grid gap-8 grid-cols-1 lg:grid-cols-3 lg:gap-8 py-16"
+      className="grid gap-8 grid-cols-1 lg:grid-cols-3 lg:gap-8 py-7"
     >
       <EducationSharedCard title={"education"} datas={education} />
       <EducationSkillCard />

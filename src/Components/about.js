@@ -8,7 +8,7 @@ const About = () => {
   return (
     <motion.section
       id="about"
-      className="py-16"
+      className="py-20 bg-[#F9F9FC]"
       transition={{ staggerChildren: 0.5 }}
     >
       <motion.div className="container mx-auto px-5 pb-16">
@@ -27,7 +27,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
             src="/images/9.jpg"
             alt=""
-            className="rounded-lg h-[23rem] sm:h-auto w-full md:h-[40rem]"
+            className="rounded-lg h-auto w-full md:h-[40rem] object-cover"
           />
           <motion.div
             initial={{ opacity: 0, x: -100 }}
@@ -36,7 +36,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="flex flex-col space-y-3"
           >
-            <div className="pt-8 flex flex-col space-y-5">
+            <div className="pt-10 flex flex-col space-y-4">
               <h1 className="font-semibold text-[32px] leading-[42px] text-blue">
                 I'm Jess Jonassen
               </h1>
@@ -53,13 +53,13 @@ const About = () => {
               <hr />
             </div>
             <ul className="flex flex-col md:grid md:grid-cols-2 pt-2 gap-y-5">
-              <h2 className="text-[26px] w-full col-span-2 text-blue leading-[26px] uppercase">
+              <h2 className="text-[20px] leading-[26px] font-semibold md:text-[26px] md:leading-[26px] w-full col-span-2 text-blue  uppercase">
                 Personal info
               </h2>
               {Object.keys(about).map((key) => (
                 <li key={key} className="text-base leading-[30px]">
                   <span className="capitalize text-semiBlack">{key}: </span>
-                  <span className="text-black">{about[key]}</span>
+                  <span className="text-black font-medium">{about[key]}</span>
                 </li>
               ))}
               <Button text={"Download CV"} />

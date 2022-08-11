@@ -7,7 +7,7 @@ const Card = ({ svg, title, link }) => {
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: false, amount: 0.6 }}
       transition={{ duration: 0.8 }}
-      className="bg-grayWhite rounded md:shadow-sm hover:shadw-[0 0 10px rgb(0 0 0 / 10%)] flex flex-col justify-start space-y-4 px-12 py-12"
+      className="bg-grayWhite rounded md:shadow-sm hover:shadw-[0 0 10px rgb(0 0 0 / 10%)] flex flex-col justify-start space-y-4 px-8 py-12"
     >
       <div className="card-img">
         <img className="h-12" src={svg} alt="" />

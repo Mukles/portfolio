@@ -1,14 +1,16 @@
-import { motion, useTransform, useViewportScroll } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Card = ({ img, title, text, date }) => {
-  const { scrollYProgress } = useViewportScroll();
-  const rotate = useTransform(scrollYProgress, [1, 0], [0, 10]);
-
   return (
-    <motion.div className="news-card cursor-pointer">
+    <motion.div
+      className="news-card cursor-pointer"
+      initial={{ opacity: 0, x: -100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: false, amount: 0.6 }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="overflow-hidden h-[380px] rounded-md object-cover">
         <motion.img
-          style={{ rotate }}
           whileHover={{
             scale: 1.1,
             rotate: 5,
@@ -25,7 +27,7 @@ const Card = ({ img, title, text, date }) => {
           <span className="w-1 h-1 cursor-pointer mx-2 rounded-full bg-semiBlack inline-block"></span>
           <span className="cursor-pointer hover:text-ornage">{text}</span>
         </p>
-        <h3 className="inline-block text-[22px] leading-[29px] text-blue hover:text-ornage">
+        <h3 className="inline-block text-[22px] leading-[29px] font-bold text-blue hover:text-ornage">
           {title}
         </h3>
       </div>

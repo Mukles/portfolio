@@ -7,9 +7,9 @@ const EducationSharedCard = ({ title, datas }) => {
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: false, amount: 0.6 }}
       transition={{ duration: 0.8 }}
-      className="card shadow-sm bg-white py-5 px-12"
+      className="card shadow-sm rounded bg-white px-6 py-6 md:py-5 md:px-12"
     >
-      <h4 className="w-24 px-3 py-2 rounded text capitalize text-[15px] leading-[20px] text-black bg-[#f7f7f7]">
+      <h4 className="w-28 text-center px-3 py-2 rounded text capitalize font-bold text-[15px] leading-[20px] text-black bg-[#f7f7f7]">
         {title}
       </h4>
       {datas.map((data, id) => {
@@ -19,7 +19,7 @@ const EducationSharedCard = ({ title, datas }) => {
               {data.texts[0]}
             </span>
             <p>
-              <span className="text-[18px] leading-[30px] text-blue">
+              <span className="text-[18px] leading-[30px] font-medium text-blue">
                 {data.texts[1]}
               </span>
               <span className="text-[16px] leading-[30px] text-semiBlack">

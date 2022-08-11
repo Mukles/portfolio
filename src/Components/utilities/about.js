@@ -5,4 +5,6 @@ export const about = {
   phone: "+12345667",
   nationality: "USA",
   email: "Yourmail@gmail.com",
+  freelance: "Available",
+  languages: "Freench, English",
 };

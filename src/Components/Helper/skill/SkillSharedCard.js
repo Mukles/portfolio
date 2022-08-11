@@ -1,6 +1,14 @@
+import { motion } from "framer-motion";
+
 const SkillSharedCard = ({ name, shifty, present, button, discription }) => {
   return (
-    <div className="card shadow-sm bg-white py-5 px-12 flex flex-col space-y-3 rounded-md">
+    <motion.div
+      initial={{ opacity: 0, x: -100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: false, amount: 0.6 }}
+      transition={{ duration: 0.8 }}
+      className="card shadow-sm bg-white py-5 px-12 flex flex-col space-y-3 rounded-md"
+    >
       <h3 className="text-[22px] leading-[29px] font-semibold">{name}</h3>
       <p className="text-[14px] leading-[18px] italic">{shifty}</p>
       <p className="text-base leading-[20px] text-semiBlack">{present}</p>
@@ -9,7 +17,7 @@ const SkillSharedCard = ({ name, shifty, present, button, discription }) => {
         {button}
       </button>
       <p className="leading-[30px] text-semiBlack">{discription}</p>
-    </div>
+    </motion.div>
   );
 };
 

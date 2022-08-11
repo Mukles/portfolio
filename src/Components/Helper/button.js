@@ -1,8 +1,9 @@
 const Buton = ({ text }) => {
   return (
     <button
+      style={{ marginRight: "auto" }}
       className={
-        "mr-auto capitalize hover-btn overflow-hidden flex flex-col h-12 border-2 lg:border-[6e6e6e] md:border-white lg:border-semiBlack md:text-white lg:text-semiBlack text-[16px] leading-[30px] px-8 rounded py-[6px] " +
+        "capitalize mr-auto hover-btn overflow-hidden flex flex-col border-2 md:border-white lg:border-semiBlack text-white lg:text-blue lg:font-medium text-[16px] leading-[30px] px-8 rounded-md py-[8px] h-[3.1rem] xl:h-[3.3rem] font-medium " +
         text
       }
     >

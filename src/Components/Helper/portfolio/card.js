@@ -5,14 +5,11 @@ const cardMotion = {
   offScreen: {
     opacity: 0,
     x: -65,
-    transition: { duration: 0.4 },
+    transition: { duration: 0.5, dealy: 1 },
   },
   onScreen: {
     opacity: 1,
     x: 0,
-    type: "spring",
-    stifness: 150,
-    damping: 50,
     transition: { duration: 0.9 },
   },
 };

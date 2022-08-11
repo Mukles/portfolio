@@ -13,16 +13,31 @@ const LargeDeviceNav = () => {
   });
   return (
     <header
-      className={`hidden md:block z-10 left-0 top-0 w-full ${
+      className={`hidden md:block z-10 left-0 top-3  transition w-full ${
         isFixed ? "fixed fixed-nav" : "absolute"
       }`}
     >
       <nav>
-        <div className="container mx-auto flex justify-between items-center py-5 px-5">
+        <div className="md:container mx-auto flex justify-between items-center py-5 md:px-5 lg:px-16 xl:px-8">
           <Link to="/home" className="nav-brand">
-            <img className="h-10" src="./images/dark.png" alt="" />
+            {!isFixed ? (
+              <>
+                <img
+                  className="h-10 lg:block hidden"
+                  src="./images/dark.png"
+                  alt=""
+                />
+                <img
+                  className="h-10 md:h-9 lg:hidden block"
+                  src="./images/download .png"
+                  alt=""
+                />
+              </>
+            ) : (
+              <img className="h-10 block" src="./images/dark.png" alt="" />
+            )}
           </Link>
-          <ul className="flex space-x-2 items-center">
+          <ul className="flex space-x-3 items-center">
             {nav.map((item, id) => {
               return (
                 <li key={id} className="cursor-pointer">
@@ -33,7 +48,7 @@ const LargeDeviceNav = () => {
                     activeClass={"navActive"}
                     to={item.text}
                   >
-                    <div className="hover-md overflow-hidden flex flex-col h-8 px-2 text-[16px] leading-[30px] capitalize md:text-white lg:text-semiBlack">
+                    <div className="hover-md overflow-hidden font-medium flex flex-col h-8 px-2 text-[16px] leading-[30px] capitalize md:text-white lg:text-semiBlack">
                       <span>{item.text}</span>
                       <span>{item.text}</span>
                     </div>
@@ -41,7 +56,7 @@ const LargeDeviceNav = () => {
                 </li>
               );
             })}
-            <button className="hover-btn overflow-hidden flex flex-col h-12 border-2 lg:border-[6e6e6e] md:border-white lg:border-semiBlack md:text-white lg:text-semiBlack text-[16px] leading-[30px] px-8 rounded py-[6px]">
+            <button className="hover-btn overflow-hidden font-medium flex flex-col h-11 border-2 md:border-white lg:border-semiBlack md:text-white lg:text-semiBlack text-[16px] leading-[30px] md:px-6 lg:px-8 rounded-md py-[6px]">
               <span>Buy Now</span>
               <span>Buy Now</span>
             </button>

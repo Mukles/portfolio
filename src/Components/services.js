@@ -29,7 +29,7 @@ const Services = () => {
           variants={CardParentMotion}
           initial={"offScreen"}
           animate={"onScreen"}
-          className="grid gap-6 grid-cols-1 md:grid-cols-2 md:gap-8 gap-y-8"
+          className="grid gap-6 grid-cols-1 md:grid-cols-2 md:gap-8 gap-y-8 xl:grid-cols-3"
         >
           {servicsData.map((service) => {
             return <Card key={service.id} {...service} />;
