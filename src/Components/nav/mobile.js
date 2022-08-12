@@ -3,7 +3,7 @@ import { nav } from "../utilities/nav";
 
 const Mobile = () => {
   return (
-    <header className="fixed px-3 z-10 shadow-[-1px_-1px_6px_0px_#0000002b] bg-white bottom-0 left-0 w-full block md:hidden">
+    <header className="fixed px-3 z-50 shadow-[-1px_-1px_6px_0px_#0000002b] bg-white bottom-0 left-0 w-full block md:hidden">
       <nav>
         <div className="container mx-auto sm:px-5 py-2">
           <ul className="flex items-center justify-between">

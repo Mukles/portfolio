@@ -23,7 +23,11 @@ const GotoTopButton = () => {
         view ? " lg:fixed opacity-0 md:opacity-100" : "hidden md:flex"
       } z-10 bg-ornage cursor-pointer w-10 h-10 rounded flex justify-center items-center fixed right-4 bottom-8`}
     >
-      <Link className="w-full h-full" to="home" smooth={true}>
+      <Link
+        className="w-full h-full flex items-center justify-center"
+        to="home"
+        smooth={true}
+      >
         <i className="fa-solid fa-caret-up text-white"></i>
       </Link>
     </motion.div>
