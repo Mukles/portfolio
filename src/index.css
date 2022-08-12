@@ -145,4 +145,61 @@ html {
   ..socail__buttons button:hover span:first-child {
     opacity: 0;
   }
+
+  /*** learn more button design ***/
+  .services-card {
+    transition: 0.5s;
+  }
+  .services-card:hover .learn-more span {
+    width: 3rem;
+  }
+
+  .services-card:hover button span {
+    color: #f52225;
+  }
+
+  .services-card:hover .learn-more span,
+  .services-card:hover .learn-more span::after,
+  .services-card:hover .learn-more span::before {
+    background: #f52225;
+  }
+
+  .learn-more {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .learn-more span {
+    transition: 0.5s;
+    position: relative;
+    width: 1.2rem;
+    height: 2px;
+    background: #6e6e6e;
+    display: block;
+    margin-top: 15px;
+  }
+
+  .learn-more span::before,
+  .learn-more span::after {
+    background: #6e6e6e;
+    width: 6px;
+    height: 1.5px;
+    content: "";
+    position: absolute;
+    right: 0px;
+  }
+
+  .learn-more span::after {
+    transform: rotate(-39deg);
+    top: 2px;
+    right: -1px;
+  }
+
+  .learn-more span::before {
+    transform: rotate(39deg);
+    top: -2px;
+    right: -1px;
+  }
 }
