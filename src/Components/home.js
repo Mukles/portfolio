@@ -54,7 +54,7 @@ const Home = () => {
           variants={parentVarient}
           animate="show"
           initial="hidden"
-          className="home-content w-full space-y-3 md:w-[87%] lg:w-4/5 xl:w-4/6 flex-col flex md:space-y-4 md:px-5 xl:space-y-3 xl:px-6 lg:-mt-4"
+          className="home-content w-full space-y-3 md:w-[87%] lg:w-4/5 xl:w-[62%] flex-col flex md:space-y-4 md:px-5 xl:space-y-3 xl:px-6 lg:-mt-4"
           style={{ zIndex: "10" }}
         >
           <motion.div
