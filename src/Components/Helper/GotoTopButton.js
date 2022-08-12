@@ -20,7 +20,7 @@ const GotoTopButton = () => {
       animate={{ x: view ? 0 : 100 }}
       transition={{ duration: 1 }}
       className={`${
-        view ? " lg:fixed" : ""
+        view ? " lg:fixed opacity-0 md:opacity-100" : "hidden md:flex"
       } z-10 bg-ornage cursor-pointer w-10 h-10 rounded flex justify-center items-center fixed right-4 bottom-8`}
     >
       <Link to="home" smooth={true}>
