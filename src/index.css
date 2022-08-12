@@ -141,6 +141,13 @@ html {
   .socail__buttons button {
     border: none;
     transition: 0.2s;
+    height: 32px;
+    padding: 0 !important;
+  }
+  .socail__buttons button {
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    color: #6e6e6e;
   }
   ..socail__buttons button:hover span:first-child {
     opacity: 0;
