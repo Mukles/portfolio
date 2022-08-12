@@ -6,8 +6,8 @@ const Experience = () => {
   const [education, setEducation] = useState(true);
   const toggleEducation = () => setEducation(!education);
   return (
-    <div className="pt-8 bg-grayWhite">
-      <div className="container mx-auto px-5">
+    <div className="pt-16 bg-grayWhite">
+      <div className="lg:container mx-auto md:px-8 px-5 xl:px-20">
         {/**** experience title ****/}
         <h1 className="experice-title capitalize font-bold text-4xl pb-6">
           My experience

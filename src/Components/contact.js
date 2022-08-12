@@ -6,7 +6,7 @@ import ContactHelper from "./Helper/contactHelper";
 const Contact = () => {
   return (
     <section id="contact" className="pt-16 pb-24">
-      <div className="container mx-auto px-5 flex flex-col space-y-12 lg:space-y-0 lg:justify-between  lg:flex-row">
+      <div className="lg:container md:px-8 mx-auto px-5 flex flex-col space-y-12 lg:space-y-0 lg:justify-between  lg:flex-row">
         <div className="">
           <ContactHelper
             title={"Contact"}

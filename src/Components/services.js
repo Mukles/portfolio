@@ -15,8 +15,8 @@ const CardParentMotion = {
 
 const Services = () => {
   return (
-    <section id="service" className="py-5">
-      <div className="container px-5 mx-auto">
+    <section id="service" className="py-20">
+      <div className="lg:container md:px-8 px-5 mx-auto">
         <Title
           title={"services"}
           header={"I provide wide range of digital services"}
@@ -29,7 +29,7 @@ const Services = () => {
           variants={CardParentMotion}
           initial={"offScreen"}
           animate={"onScreen"}
-          className="grid gap-6 grid-cols-1 md:grid-cols-2 md:gap-8 gap-y-8 xl:grid-cols-3"
+          className="grid gap-6 grid-cols-1 md:grid-cols-2 md:gap-8 gap-y-8 xl:grid-cols-4"
         >
           {servicsData.map((service) => {
             return <Card key={service.id} {...service} />;

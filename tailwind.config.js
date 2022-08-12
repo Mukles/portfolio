@@ -2,6 +2,18 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
+    screens: {
+      xs: "576",
+      sm: "640px",
+
+      md: "768px",
+
+      lg: "1024px",
+
+      xl: "1280px",
+
+      "2xl": "1536px",
+    },
     fontFamily: {
       poppins: ["Poppins", "sans-serif"],
       dmSans: ["DM Sans", "sans-serif"],

@@ -18,7 +18,7 @@ const LargeDeviceNav = () => {
       }`}
     >
       <nav>
-        <div className="md:container mx-auto flex justify-between items-center py-5 md:px-5 lg:px-16 xl:px-8">
+        <div className="mx-auto flex justify-between items-center py-5 md:px-5 lg:px-16 xl:px-8">
           <Link to="/home" className="nav-brand">
             {!isFixed ? (
               <>

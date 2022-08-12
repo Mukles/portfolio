@@ -120,7 +120,29 @@ html {
     color: #0f172a !important;
   }
 
-  /*expensive button responsive*/
-  @media only screen and (min-width: 576px) {
+  /*portfolio button responsive*/
+  @media only screen and (max-width: 992px) {
+    .portfolio:hover {
+      border-color: #fff !important;
+      color: #fff !important;
+    }
+    .portfolio:hover span:last-child {
+      color: #fff !important;
+    }
+  }
+
+  /* about line responsive */
+  span.about-toltip::after {
+    width: 2.8rem;
+    left: 6rem;
+  }
+
+  /*** social media button ***/
+  .socail__buttons button {
+    border: none;
+    transition: 0.2s;
+  }
+  ..socail__buttons button:hover span:first-child {
+    opacity: 0;
   }
 }

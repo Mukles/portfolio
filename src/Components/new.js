@@ -16,7 +16,7 @@ const NewsMotion = {
 const News = () => {
   return (
     <section id="news" className="bg-[#f9f9fc] py-20">
-      <div className="container px-5 mx-auto">
+      <div className="lg:container md:px-8 px-5 mx-auto">
         <Title
           title={"blogs"}
           header="recent news"

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Experience from "./experience";
 import Button from "./Helper/button";
+import GotoTopButton from "./Helper/GotoTopButton";
 import Title from "./Helper/title";
 import { about } from "./utilities/about";
 
@@ -11,7 +12,9 @@ const About = () => {
       className="py-20 bg-[#F9F9FC]"
       transition={{ staggerChildren: 0.5 }}
     >
-      <motion.div className="container mx-auto px-5 pb-16">
+      {/***Goto Button ***/}
+      <GotoTopButton />
+      <motion.div className="lg:container mx-auto px-5 md:px-8 pb-16">
         <Title
           title={"about me"}
           header={"about me"}
@@ -19,7 +22,7 @@ const About = () => {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, egestas. Id fermentum nullam ipsum massa."
           }
         />
-        <div className="flex flex-col lg:flex-row items-center md:space-x-12 lg:space-x-24">
+        <div className="flex flex-col  xl:flex-row items-center lg:space-x-0 xl:space-x-24">
           <motion.img
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -27,7 +30,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
             src="/images/9.jpg"
             alt=""
-            className="rounded-lg h-auto w-full md:h-[40rem] object-cover"
+            className="rounded-lg lg:auto h-auto w-full md:h-[40rem] object-cover"
           />
           <motion.div
             initial={{ opacity: 0, x: -100 }}

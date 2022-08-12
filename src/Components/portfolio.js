@@ -13,8 +13,8 @@ const variants = {
 
 const Portfolio = () => {
   return (
-    <section id="portfolio" className="py-28">
-      <div className="container mx-auto px-5 lg:px-28">
+    <section id="portfolio" className="py-20 bg-grayWhite">
+      <div className="lg:container md:px-8 lg:px-10 mx-auto px-5 xl:px-28">
         <Title
           title={"portfolio"}
           header={"my portfolio"}
@@ -26,7 +26,7 @@ const Portfolio = () => {
           variants={variants}
           initial="offScreen"
           animate="onScreen"
-          className="grid grid-cols-1 gap-y-8 md:gy-0 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-8"
+          className="grid grid-cols-1 gap-y-8 md:gy-0 md:grid-cols-2 md:gap-6 xl:grid-cols-3 xl:gap-8"
         >
           {portfolioData.map((item, idx) => (
             <Card key={idx} {...item} />

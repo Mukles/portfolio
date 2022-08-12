@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import Button from "./Helper/button";
+import SocialButton from "./Helper/socialButton";
 import TypeAnimation from "./Helper/typeAnimation";
+import ArrowAnimation from "./Helper/UpAndDownArrowAnimation";
 const Home = () => {
   const parentVarient = {
     hidden: {
@@ -38,12 +40,16 @@ const Home = () => {
       id="home"
       className="h-screen bg-image relative"
     >
+      {/*** Arrow animation ***/}
+      <ArrowAnimation />
       {/*** overlay ****/}
+      {/*** socal button ***/}
+      <SocialButton />
       <div
         className="absolute top-0 duration-150 ease-out left-0 w-full h-full block lg:hidden"
         style={{ background: "rgb(0 0 0 / 69%)" }}
       ></div>
-      <div className="container px-5 mx-auto flex flex-col justify-center h-full">
+      <div className="lg:container px-5 mx-auto flex flex-col justify-center h-full">
         <motion.div
           variants={parentVarient}
           animate="show"
