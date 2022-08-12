@@ -25,7 +25,10 @@ const ArrowAnimation = () => {
       }}
       className="w-8 h-8 cursor-pointer rounded-full bottom-12 left-[40%] sm:left-1/2 z-50 bg-ornage absolute flex justify-center items-center"
     >
-      <Link to="about" smooth={true} offset={-83}>
+      <Link className="md:block hidden" to="about" smooth={true} offset={-83}>
+        <i className="fa-solid fa-angle-down text-white"></i>
+      </Link>
+      <Link className="md:hidden block" to="about" smooth={true}>
         <i className="fa-solid fa-angle-down text-white"></i>
       </Link>
     </motion.div>
